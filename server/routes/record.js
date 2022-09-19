@@ -15,20 +15,21 @@ const ObjectId = require("mongodb").ObjectId;
 recordRoutes.route("/record").get(function (req, res) {
   let db_connect = dbo.getDb("restaurant");
   db_connect.collection("records").find({}).toArray(function (err, result) {
-    // if (err) throw err;
-    // res.json(result);
-    if (err) {
-      res.status(500).json({
-        err
-      });
-    } else{
-      res.status(200).json({
-        message: result,
-      })
-
-}
+    if (err) throw err;
+    res.json(result);
+    // if (err) {
+    //   res.status(500).json({
+    //     err
+    //   });
+    // } else{
+    //   res.status(200).json({
+    //     message: "result",
+    //   })
+    // }
   });
 });
+
+// get filter by category
  
 // get one by id
 recordRoutes.route("/record/:id").get(function (req, res) {
@@ -51,6 +52,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;
+    console.log("1 record created");
     response.json(res);
   });
 });
