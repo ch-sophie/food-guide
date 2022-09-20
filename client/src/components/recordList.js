@@ -18,9 +18,10 @@ const Record = (props) => (
   </tr>
 );
  
+// function 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
- 
+
   // fetch records
   useEffect(() => {
     async function getRecords() {
@@ -75,7 +76,7 @@ export default function RecordList() {
          <tr>
            <th>Name</th>
            <th>Address</th>
-           <th>Note</th>
+           <th className="w-25">Note</th>
            <th>Category</th>
            <th>Action</th>
          </tr>

@@ -23,7 +23,7 @@ export default function Navbar() {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <NavLink className="nav-link" to="/create">
-                <span className="addnew fs-5 fw-bold text-black">Add new +</span>
+                <span className="addnew fs-5 fw-bold">Add new +</span>
               </NavLink>
             </li>
           </ul>
