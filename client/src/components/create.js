@@ -58,12 +58,12 @@ export default function Create() {
         </div>
 
         <div className="form-group mx-5 my-4 fw-bold">
-          <label htmlFor="address">Note</label>
+          <label htmlFor="note">Additional Note</label>
           <input type="text" className="form-control mt-1 border-0" id="note" value={form.note}onChange={(e) =>updateForm({ note: e.target.value })} />
         </div>
 
         <div className="form-group mx-5 my-4 fw-bold">
-        <label htmlFor="address">Category</label><br />
+        <label htmlFor="category">Category</label><br />
           <div className="form-check form-check-inline mt-1">
             <input className="form-check-input border-0" type="radio" name="category" id="categoryChinese" value="Chinese" checked={form.category === "Chinese"} onChange={(e) => updateForm({ category: e.target.value })} />
             <label htmlFor="categoryChinese" className="form-check-label">Chinese</label>

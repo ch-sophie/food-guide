@@ -39,7 +39,7 @@ export default function RecordList() {
   },
   [records.length]);
  
-  // delete
+  // delete record
   async function deleteRecord(id) {
     await fetch(`http://localhost:5000/${id}`, {
       method: "DELETE"
@@ -47,7 +47,6 @@ export default function RecordList() {
     const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
   }
- 
   // map out the records on the table
   function recordList() {
     return records.map((record) => {
@@ -76,7 +75,7 @@ export default function RecordList() {
          <tr>
            <th>Name</th>
            <th>Address</th>
-           <th className="w-25">Note</th>
+           <th className="w-25">Additional Note</th>
            <th>Category</th>
            <th>Action</th>
          </tr>
