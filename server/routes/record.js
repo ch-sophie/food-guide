@@ -21,15 +21,36 @@ recordRoutes.route("/record").get(function (req, res) {
 });
 
 // get one by id
-recordRoutes.route("/record/:id").get(function (req, res) {
+// recordRoutes.route("/record/:id").get(function (req, res) {
+//   let db_connect = dbo.getDb();
+//   let myquery = { _id: ObjectId(req.params.id) };
+//   db_connect.collection("records").findOne(myquery, function (err, result) {
+//     if (err) throw err;
+//     res.json(result);
+//   });
+// });
+// get by id method
+recordRoutes.route("/record/:id").get(async (req, res) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("records").findOne(myquery, function (err, result) {
-    if (err) throw err;
-    res.json(result);
-  });
-});
- 
+  try {
+      const data = await db_connect.collection("records").findOne(myquery);
+      res.json(data)
+  }
+  catch (error) {
+      res.status(500).json({ message: error.message })
+  }
+})
+
+// test
+// recordRoutes.route("/record").get(function (req, res) {
+//     let db_connect = dbo.getDb("restaurant");
+//     db_connect.collection("records").find({}, {projection: {_id: 0, name: 1, adress: 1, note: 1, category: 1}}).toArray(function (err, result) {
+//       if (err) throw err;
+//       res.json(result);
+//     });
+//   }); 
+
 // create post
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
