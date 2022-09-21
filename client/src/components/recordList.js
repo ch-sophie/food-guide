@@ -75,7 +75,7 @@ export default function RecordList() {
          <tr>
            <th>Name</th>
            <th>Address</th>
-           <th className="w-25">Additional Note</th>
+           <th>Additional Note</th>
            <th>Category</th>
            <th>Action</th>
          </tr>

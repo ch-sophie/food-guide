@@ -66,33 +66,33 @@ export default function Edit() {
     <form onSubmit={onSubmit}>
       <div className="form-group mx-5 my-4 fw-bold">
         <label htmlFor="name">Name </label>
-        <input type="text" className="form-control mt-1 border-0" id="name" value={form.name} onChange={(e) => updateForm({ name: e.target.value })} />
+        <input type="text" className="form-control mt-1 border-0 shadow-sm" id="name" value={form.name} onChange={(e) => updateForm({ name: e.target.value })} />
       </div>
       
       <div className="form-group mx-5 my-4 fw-bold">
         <label htmlFor="address">Address </label>
-        <input type="text" className="form-control mt-1 border-0" id="address" value={form.address}onChange={(e) => updateForm({ address: e.target.value })} />
+        <input type="text" className="form-control mt-1 border-0 shadow-sm" id="address" value={form.address}onChange={(e) => updateForm({ address: e.target.value })} />
       </div>
 
       <div className="form-group mx-5 my-4 fw-bold">
         <label htmlFor="note">Additional Note</label>
-        <input type="text" className="form-control mt-1 border-0" id="note" value={form.note}onChange={(e) => updateForm({ note: e.target.value })} />
+        <input type="text" className="form-control mt-1 border-0 shadow-sm" id="note" value={form.note}onChange={(e) => updateForm({ note: e.target.value })} />
       </div>
 
       <div className="form-group mx-5 my-4 fw-bold">
         <label htmlFor="category">Category</label><br />
         <div className="form-check form-check-inline">
-          <input className="form-check-input border-0" type="radio" name="category" id="categoryChinese" value="Chinese" checked={form.category === "Chinese"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryChinese" value="Chinese" checked={form.category === "Chinese"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryChinese" className="form-check-label">Chinese</label>
         </div>
         
         <div className="form-check form-check-inline">
-          <input className="form-check-input border-0" type="radio" name="category" id="categoryKorean" value="Korean" checked={form.category === "Korean"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryKorean" value="Korean" checked={form.category === "Korean"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryKorean" className="form-check-label">Korean</label>
         </div>
         
         <div className="form-check form-check-inline">
-          <input className="form-check-input border-0" type="radio" name="category" id="categoryJapanese" value="Japanese" checked={form.category === "Japanese"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryJapanese" value="Japanese" checked={form.category === "Japanese"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryJapanese" className="form-check-label">Japanese</label>
         </div>
       </div>
