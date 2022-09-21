@@ -1,0 +1,289 @@
+{
+	"tables": {
+		"ca27ef17-7714-468f-ad9a-c827e6b5f2c5": {
+			"id": "ca27ef17-7714-468f-ad9a-c827e6b5f2c5",
+			"visible": true,
+			"name": "records",
+			"desc": "restaurant records",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "18f31218-e5f0-4dfa-a8be-c5429a56fb50",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "f6fe2e23-8d26-41a8-bb22-e9268287073b",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "fc308328-a9b0-434a-a269-bd18bd65ae0a",
+					"name": "address",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "ef5b059d-9d9b-4bc8-8534-815aa72f29b2",
+					"name": "note",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "56659883-7be2-4fc5-b922-cae083d74503",
+					"name": "category",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [
+				"4e36f449-8dfb-4d23-b0b3-6cc1e76b3603"
+			],
+			"keys": [
+				{
+					"id": "1c494b71-f46e-4c00-9105-f988ff219b23",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "6c84fcd9-8b2b-451a-abdf-9de83255271d",
+							"colid": "18f31218-e5f0-4dfa-a8be-c5429a56fb50"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		},
+		"3cc0e0a4-c3ad-4e39-8257-b7af3395677f": {
+			"id": "3cc0e0a4-c3ad-4e39-8257-b7af3395677f",
+			"visible": true,
+			"name": "address",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "f35a8b27-5459-4f37-8170-92be71c2f166",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "4e2c99ee-d559-46c0-9ba0-3ee5a7135483",
+					"name": "street",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "78f7d2e4-3b2f-47c2-a7cb-230c040b66c4",
+					"name": "city",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "15dfd889-0f76-45ba-b4d0-8143e4c73b14",
+					"name": "postal code",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [
+				"4e36f449-8dfb-4d23-b0b3-6cc1e76b3603"
+			],
+			"keys": [
+				{
+					"id": "8a26049a-545e-48fd-ad9f-c384fed485b7",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "20b74bf9-bff1-4e04-af5a-7afd9262c146",
+							"colid": "f35a8b27-5459-4f37-8170-92be71c2f166"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
+		}
+	},
+	"relations": {},
+	"notes": {},
+	"lines": {
+		"4e36f449-8dfb-4d23-b0b3-6cc1e76b3603": {
+			"id": "4e36f449-8dfb-4d23-b0b3-6cc1e76b3603",
+			"visible": true,
+			"name": "records-address",
+			"desc": "",
+			"style": "solid",
+			"parent": "ca27ef17-7714-468f-ad9a-c827e6b5f2c5",
+			"child": "3cc0e0a4-c3ad-4e39-8257-b7af3395677f",
+			"lineColor": "#222222",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		}
+	},
+	"model": {
+		"name": "food-guide",
+		"id": "82a697fb-7d18-4860-bf20-fa7a6652e658",
+		"activeDiagram": "0add84c1-938b-434e-9c23-bea0872082d6",
+		"desc": "",
+		"path": "",
+		"type": "MONGODB",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 4,
+			"minor": 6,
+			"extra": 6
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"writeFileParam": false,
+		"def_coltopk": true,
+		"def_validationLevel": "na",
+		"def_validationAction": "na",
+		"def_collation": "",
+		"def_others": "",
+		"lastSaved": "9/20/2022"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"0add84c1-938b-434e-9c23-bea0872082d6": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "0add84c1-938b-434e-9c23-bea0872082d6",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "#009688",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"ca27ef17-7714-468f-ad9a-c827e6b5f2c5": {
+					"referencedItemId": "ca27ef17-7714-468f-ad9a-c827e6b5f2c5",
+					"x": 130,
+					"y": 125,
+					"gHeight": 117,
+					"gWidth": 182,
+					"color": "#ffffff",
+					"background": "#3f51b5",
+					"resized": false,
+					"autoExpand": true
+				},
+				"3cc0e0a4-c3ad-4e39-8257-b7af3395677f": {
+					"referencedItemId": "3cc0e0a4-c3ad-4e39-8257-b7af3395677f",
+					"x": 420,
+					"y": 162,
+					"gHeight": 99,
+					"gWidth": 198,
+					"color": "#ffffff",
+					"background": "#f44336",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [],
+	"collapsedTreeItems": []
+}

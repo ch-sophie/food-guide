@@ -29,7 +29,7 @@ recordRoutes.route("/record").get(function (req, res) {
 //     res.json(result);
 //   });
 // });
-// get by id method
+// get one by id method
 recordRoutes.route("/record/:id").get(async (req, res) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
@@ -42,7 +42,7 @@ recordRoutes.route("/record/:id").get(async (req, res) => {
   }
 })
 
-// test
+// test getAll except _id
 // recordRoutes.route("/record").get(function (req, res) {
 //     let db_connect = dbo.getDb("restaurant");
 //     db_connect.collection("records").find({}, {projection: {_id: 0, name: 1, adress: 1, note: 1, category: 1}}).toArray(function (err, result) {
@@ -67,7 +67,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
   });
 });
  
-// update
+// update patch
 recordRoutes.route("/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
