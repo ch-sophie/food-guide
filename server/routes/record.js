@@ -51,6 +51,17 @@ recordRoutes.route("/record/:id").get(async (req, res) => {
 //     });
 //   }); 
 
+// get filter category
+recordRoutes.route("/record/category/:category").get(function (req, res) {
+  let db_connect = dbo.getDb("restaurant");
+  let myquery = {category: req.params.category};
+  db_connect.collection("records").find(myquery).toArray(function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+
 // create post
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
