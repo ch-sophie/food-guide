@@ -95,6 +95,21 @@ export default function Edit() {
           <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryJapanese" value="Japanese" checked={form.category === "Japanese"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryJapanese" className="form-check-label">Japanese</label>
         </div>
+
+        <div className="form-check form-check-inline">
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryThaiViet" value="ThaiViet" checked={form.category === "ThaiViet"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <label htmlFor="categoryThaiViet" className="form-check-label">Thai/Viet</label>
+        </div>
+
+        <div className="form-check form-check-inline">
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryItalian" value="Italian" checked={form.category === "Italian"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <label htmlFor="categoryItalian" className="form-check-label">Italian</label>
+        </div>
+
+        <div className="form-check form-check-inline">
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryMexican" value="Mexican" checked={form.category === "Mexican"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <label htmlFor="categoryMexican" className="form-check-label">Mexican-style</label>
+        </div>
       </div>
       <br />
       

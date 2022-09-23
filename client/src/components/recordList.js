@@ -13,7 +13,7 @@ const Record = (props) => (
     <td>{props.record.category}</td>
     <td>
       <Link className="btn btn-link" to={`/edit/${props.record._id}`}><EditIcon className="icon" /></Link>
-      <button className="btn btn-link" onClick={() => { props.deleteRecord(props.record._id); }} ><ClearIcon className="icon"/></button>
+      <button className="btn btn-link" onClick={() => { props.deleteRecord(props.record._id); }} ><ClearIcon className="icon" /></button>
     </td>
   </tr>
 );
@@ -47,6 +47,7 @@ export default function RecordList() {
     const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
   }
+
   // map out the records on the table
   function recordList() {
     return records.map((record) => {
@@ -75,6 +76,7 @@ export default function RecordList() {
          <tr>
            <th>Name</th>
            <th>Address</th>
+           {/* <th className="w-25">Additional Note</th> */}
            <th>Additional Note</th>
            <th>Category</th>
            <th>Action</th>
