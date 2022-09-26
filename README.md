@@ -10,4 +10,4 @@ The database is on MongoDB.
 **Framework used**: Node JS and Express - React JS
 
 #### Preview:
-
+![Home pgae](/preview.png "Home page")
