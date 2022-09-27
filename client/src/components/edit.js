@@ -97,7 +97,7 @@ export default function Edit() {
         </div>
 
         <div className="form-check form-check-inline">
-          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryThaiViet" value="ThaiViet" checked={form.category === "ThaiViet"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryThaiViet" value="Thai/Viet" checked={form.category === "Thai/Viet"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryThaiViet" className="form-check-label">Thai/Viet</label>
         </div>
 
@@ -107,7 +107,7 @@ export default function Edit() {
         </div>
 
         <div className="form-check form-check-inline">
-          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryMexican" value="Mexican" checked={form.category === "Mexican"} onChange={(e) => updateForm({ category: e.target.value })} />
+          <input className="form-check-input border-0 shadow-sm" type="radio" name="category" id="categoryMexican" value="Mexican-style" checked={form.category === "Mexican-style"} onChange={(e) => updateForm({ category: e.target.value })} />
           <label htmlFor="categoryMexican" className="form-check-label">Mexican-style</label>
         </div>
       </div>

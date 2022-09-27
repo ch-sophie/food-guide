@@ -17,7 +17,7 @@ const Record = (props) => (
     </td>
   </tr>
 );
- 
+
 // function 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
@@ -47,7 +47,6 @@ export default function RecordList() {
     const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
   }
-
   // map out the records on the table
   function recordList() {
     return records.map((record) => {
@@ -55,7 +54,7 @@ export default function RecordList() {
         <Record record={record} deleteRecord={() => deleteRecord(record._id)} key={record._id} />
       );
     });
-  }
+  };
   
   return (
     <div className="m-5">

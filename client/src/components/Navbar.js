@@ -3,7 +3,7 @@ import '../App.css';
 import logo from "../assets/dish.png";
 import "bootstrap/dist/css/bootstrap.css";
 
-// import NavLink to utilize the react router.
+// import NavLink to utilize the react router
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
