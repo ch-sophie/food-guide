@@ -1,4 +1,5 @@
 const express = require("express");
+const model = require("../model/model");
 
 // define routes
 // recordRoutes is an instance of the express router
@@ -51,7 +52,7 @@ recordRoutes.route("/record/:id").get(async (req, res) => {
 //     });
 //   }); 
 
-// get filter category
+// get category
 recordRoutes.route("/record/category/:category").get(function (req, res) {
   let db_connect = dbo.getDb("restaurant");
   let myquery = {category: req.params.category};
