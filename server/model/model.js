@@ -17,6 +17,9 @@ const RecordSchema  = new mongoose.Schema({
     note:{
         type: String,
         required: true,
+    },
+    coordinates:{
+        type: String,
     }
 });
 

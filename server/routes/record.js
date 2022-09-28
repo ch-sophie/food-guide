@@ -62,6 +62,26 @@ recordRoutes.route("/record/category/:category").get(function (req, res) {
   });
 });
 
+// get by name
+recordRoutes.route("/record/name/:name").get(function (req, res) {
+  let db_connect = dbo.getDb("restaurant");
+  let myquery = {name: req.params.name};
+  db_connect.collection("records").find(myquery).toArray(function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+// get by address
+recordRoutes.route("/record/address/:address").get(function (req, res) {
+  let db_connect = dbo.getDb("restaurant");
+  let myquery = {address: req.params.address};
+  db_connect.collection("records").find(myquery).toArray(function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
 
 // create post
 recordRoutes.route("/record/add").post(function (req, response) {
@@ -71,6 +91,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
     address: req.body.address,
     note: req.body.note,
     category: req.body.category,
+    coordinates: req.body.coordinates
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -79,8 +100,8 @@ recordRoutes.route("/record/add").post(function (req, response) {
   });
 });
  
-// update patch
-recordRoutes.route("/update/:id").post(function (req, response) {
+// update 
+recordRoutes.route("/record/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
   let newvalues = {
@@ -89,6 +110,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
       address: req.body.address,
       note: req.body.note,
       category: req.body.category,
+      coordinates: req.body.coordinates
     },
   };
   db_connect.collection("records").updateOne(myquery, newvalues, function (err, res) {
