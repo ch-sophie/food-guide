@@ -1,6 +1,6 @@
 # My list of restaurants 
 
-### :ramen: [See the link here](https://main--gregarious-kelpie-ad2d46.netlify.app/) 
+### :ramen: [See the link here](https://gregarious-kelpie-ad2d46.netlify.app/) 
 
 ### The mission:
 I created a list of my favourite restaurants in Brussels using Node and React JS.   
